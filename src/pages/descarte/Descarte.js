@@ -1,7 +1,7 @@
 // Assuming Descarte.js has similar content to Descartar.tsx
 // This file might need to be updated based on its original content
 
-import React from 'react';
+import react from 'react';
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 import './Descarte.css';
 
