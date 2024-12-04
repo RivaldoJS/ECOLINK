@@ -1,0 +1,32 @@
+/* Assuming Descarte.css contains styles for the Descarte component */
+.descarte {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+#descarteForm {
+    margin-top: 20px;
+}
+
+#descarteForm label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#descarteForm input, #descarteForm select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+#descarteForm button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#descarteForm button:hover {
+    background-color: #45a049;
+}

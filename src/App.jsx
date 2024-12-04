@@ -5,7 +5,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 import Home from "./pages/Home";
-import Descartar from "./pages/Descartar";
+import Descartar from "./pages/descarte/Descartar";
 import SobreNos from "./pages/SobreNos";
 import Cadastro from "./pages/Cadastro";
 import Login from "./pages/Login";
@@ -25,11 +25,7 @@ const App = () => {
     <div>
       <Navbar />
 
-     
-   
-        // Espaço vazio de 80px em páginas que não sejam "/"
-        <div className="h-[80px]" />
-      )}
+      {location.pathname !== "/" && <div className="h-[80px]" />}
 
       {/* Rotas */}
       <Routes>
