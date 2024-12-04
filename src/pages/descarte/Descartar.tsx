@@ -1,6 +1,7 @@
 import React from 'react';
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 import './Descarte.css';
+import Footer from '../../components/Footer/Footer';
 
 const containerStyle = {
     width: '100%',
@@ -41,7 +42,11 @@ function Descartar() {
                     <Marker position={center} />
                 </GoogleMap>
             </LoadScript>
+            
+    <Footer /> 
+        
         </div>
+        
     );
 }
 

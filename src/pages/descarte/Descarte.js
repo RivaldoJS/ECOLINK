@@ -30,6 +30,11 @@ function Descarte() {
                     <option value="perifericos">Periféricos</option>
                     <option value="bateria">Bateria</option>
                     <option value="televisao">Televisão</option>
+                    <option value="notebook">Notebook</option> 
+                    <option value="impressora">Impressora</option> 
+                    <option value="celular">Celular</option> 
+                    <option value="tablet">Tablet</option> 
+                    <option value="scanner">Scanner</option>
                 </select>
                 
                 <button type="submit">Efetuar Descarte</button>
