@@ -33,7 +33,7 @@ function Descartar() {
                 <button type="submit">Efetuar Descarte</button>
             </form>
 
-            <LoadScript googleMapsApiKey="YOUR_API_KEY">
+            <LoadScript googleMapsApiKey="AIzaSyBFfzmovTtQXIHGktuJAL2Gh4anule0fuY">
                 <GoogleMap
                     mapContainerStyle={containerStyle}
                     center={center}
