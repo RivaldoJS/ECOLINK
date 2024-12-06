@@ -5,7 +5,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 import Home from "./pages/Home";
-import Descartar from "./pages/descarte/Descartar";
+import Descarte from "./pages/Descarte";
 import SobreNos from "./pages/SobreNos";
 import Cadastro from "./pages/Cadastro";
 import Login from "./pages/Login";
@@ -30,7 +30,7 @@ const App = () => {
       {/* Rotas */}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/descartar" element={<Descartar />} />
+        <Route path="/descarte" element={<Descarte />} />
         <Route path="/sobre-nos" element={<SobreNos />} />
         <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/login" element={<Login />} />

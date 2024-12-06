@@ -27,7 +27,7 @@ const Navbar = () => {
           <div className="hidden sm:block">
             <ul className="flex items-center gap-6 text-xl text-white">
               <li>
-                <Link to="/descartar">Descartar</Link>
+                <Link to="/descarte">Descartar</Link>
               </li>
               <li>
                 <Link to="/sobre-nos">Sobre Nós</Link>
@@ -57,7 +57,7 @@ const Navbar = () => {
           <div className="sm:hidden mt-4 text-white rounded-lg shadow-lg">
             <ul className="flex flex-col items-start gap-4 p-4">
               <li>
-                <Link to="/descartar" onClick={toggleMenu}>
+                <Link to="/Descarte" onClick={toggleMenu}>
                   Descartar
                 </Link>
               </li>
