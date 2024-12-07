@@ -16,7 +16,7 @@ const center = {
 function Descartar() {
     return (
         <div className="descarte">
-            <h1>Descarte de Itens Eletrônicos</h1>
+            <h1>Descarte de Ites Eletrônicos</h1>
             <form id="descarteForm">
                 <label htmlFor="localizacao">Localização:</label>
                 <input type="text" id="localizacao" name="localizacao" required />
