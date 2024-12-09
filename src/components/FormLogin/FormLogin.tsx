@@ -15,7 +15,7 @@ const FormLogin: React.FC<FormLoginProps> = ({ error, setError }) => {
     e.preventDefault();
 
     if (email === "admin@example.com" && password === "password123") {
-      navigate("/descartar");
+      navigate("/descarte");
     } else {
       setError("Email ou senha incorretos");
     }
