@@ -47,17 +47,30 @@ const options = [
 
 function Descartar() {
     const [selectedItems, setSelectedItems] = useState([]);
+    const [showPopup, setShowPopup] = useState(false);
+    const [submittedData, setSubmittedData] = useState(null);
+    const [discardDate, setDiscardDate] = useState('');
+    const [location, setLocation] = useState('');
 
     const handleChange = (selectedOptions) => {
         setSelectedItems(selectedOptions);
     };
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setSubmittedData({
+            items: selectedItems,
+            date: discardDate,
+            location: location
+        });
+    };
+
     return (
         <div className="descarte">
             <h1>Descarte de Itens Eletrônicos</h1>
-            <form id="descarteForm">
+            <form id="descarteForm" onSubmit={handleSubmit}>
                 <label htmlFor="localizacao">Localização:</label>
-                <input type="text" id="localizacao" name="localizacao" required />
+                <input type="text" id="localizacao" name="localizacao" required value={location} onChange={(e) => setLocation(e.target.value)} />
 
                 <label htmlFor="items">O que precisa descartar?</label>
                 <Select
@@ -70,7 +83,7 @@ function Descartar() {
 
                 <div>
                     <label htmlFor="data">Data do Descarte:</label>
-                    <input type="date" id="data" name="data" required style={{ width: '20%' }} />
+                    <input type="date" id="data" name="data" required style={{ width: '20%' }} value={discardDate} onChange={(e) => setDiscardDate(e.target.value)} />
                 </div>
                 <div>
                     <button type="submit">Efetuar Descarte</button>
@@ -85,6 +98,22 @@ function Descartar() {
                     </GoogleMap>
                 </LoadScript>
             </form>
+            {submittedData && (
+                <div className="popup-overlay">
+                    <div className="popup-content">
+                        <button className="close-button" onClick={() => setSubmittedData(null)}>×</button>
+                        <h3>Dados Submetidos:</h3>
+                        <p>Local: {submittedData.location}</p>
+                        <p>Data: {submittedData.date}</p>
+                        <ul>
+                            {submittedData.items.map((item) => (
+                                <li key={item.value}>{item.label}</li>
+                            ))}
+                        </ul>
+                        <button onClick={() => setSubmittedData(null)}></button>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
